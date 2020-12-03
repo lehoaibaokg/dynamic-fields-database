@@ -54,10 +54,13 @@ namespace DemoTruongDuLieuDong.Controllers
 
                 product.Id = Guid.NewGuid();
 
-                foreach (var item in product.ProductFields)
+                if (product.ProductFields != null)
                 {
-                    item.Id = Guid.NewGuid();
-                    item.ProductId = product.Id;
+                    foreach (var item in product.ProductFields)
+                    {
+                        item.Id = Guid.NewGuid();
+                        item.ProductId = product.Id;
+                    }
                 }
 
                 _context.Add(product);

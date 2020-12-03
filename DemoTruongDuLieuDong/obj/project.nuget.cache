@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0bohNfymvwFasCSAuOJLHaNp7oVFfGH8JAdb5xgsXZRlxLpREpWalfBue5r6KOHZRWas3HMMUBfrEHsdy87Mug==",
+  "dgSpecHash": "70lN8tC86MbOMMUdKBB0j0Oo3vkHUeztPF3yOI2mZajCK22lkJ9Uv1X3NWYuTNLWUp5xfMDAQ8RjAveMIqp/Rg==",
   "success": true,
-  "projectFilePath": "D:\\LHBAO_DATA\\DemoTruongDuLieuDong\\DemoTruongDuLieuDong\\DemoTruongDuLieuDong.csproj",
+  "projectFilePath": "D:\\LHBAO_DATA\\dynamic-fields-database\\DemoTruongDuLieuDong\\DemoTruongDuLieuDong.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HoaiBao-Le\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.4\\microsoft.aspnetcore.cryptography.internal.3.1.4.nupkg.sha512",
     "C:\\Users\\HoaiBao-Le\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.4\\microsoft.aspnetcore.cryptography.keyderivation.3.1.4.nupkg.sha512",

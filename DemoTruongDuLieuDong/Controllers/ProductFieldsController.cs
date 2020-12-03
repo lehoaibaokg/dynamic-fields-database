@@ -59,6 +59,16 @@ namespace DemoTruongDuLieuDong.Controllers
             ViewData["KieuDuLieu"] = new SelectList(listKieuDuLieu, "Key", "Value", listKieuDuLieu.First());
             ViewData["Index"] = new SelectList(listIndex, "Key", "Value", newIndex);
 
+            var countProduct = _context.Products.Count();
+            if (countProduct == 0)
+            {
+                ModelState.AddModelError(string.Empty, "Chưa có hàng hóa, không thể tạo trường!");
+                ViewData["IsCreate"] = false;
+                return View();
+            }
+
+            ViewData["IsCreate"] = true;
+
             return View();
         }
 

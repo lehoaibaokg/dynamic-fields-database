@@ -3,10 +3,11 @@
 @{
     ViewData["Title"] = "Danh sách sản phẩm";
 
-    var productFields = Model.ToList()[0].ProductFields.OrderBy(x => x.Index);
+    var productFields = (Model.Count() > 0) ? Model.ToList()[0].ProductFields : new List<ProductField>();
 }
 
 <p>
+    <a asp-controller="Home" asp-action="Index">Quay lại</a> |
     <a asp-action="Create">Thêm mới hàng hóa</a> |
     <a asp-controller="ProductFields" asp-action="Create">Thêm mới trường động</a> |
     <a asp-controller="ProductFields" asp-action="Index">Danh sách các trường động</a>
@@ -32,7 +33,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.GhiChu)
             </th>
-            @foreach (var item in productFields)
+            @foreach (var item in productFields.OrderBy(x => x.Index))
             {
                 <th>
                     @item.TenHienThi

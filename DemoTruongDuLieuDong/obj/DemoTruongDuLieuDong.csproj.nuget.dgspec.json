@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LHBAO_DATA\\DemoTruongDuLieuDong\\DemoTruongDuLieuDong\\DemoTruongDuLieuDong.csproj": {}
+    "D:\\LHBAO_DATA\\dynamic-fields-database\\DemoTruongDuLieuDong\\DemoTruongDuLieuDong.csproj": {}
   },
   "projects": {
-    "D:\\LHBAO_DATA\\DemoTruongDuLieuDong\\DemoTruongDuLieuDong\\DemoTruongDuLieuDong.csproj": {
+    "D:\\LHBAO_DATA\\dynamic-fields-database\\DemoTruongDuLieuDong\\DemoTruongDuLieuDong.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LHBAO_DATA\\DemoTruongDuLieuDong\\DemoTruongDuLieuDong\\DemoTruongDuLieuDong.csproj",
+        "projectUniqueName": "D:\\LHBAO_DATA\\dynamic-fields-database\\DemoTruongDuLieuDong\\DemoTruongDuLieuDong.csproj",
         "projectName": "DemoTruongDuLieuDong",
-        "projectPath": "D:\\LHBAO_DATA\\DemoTruongDuLieuDong\\DemoTruongDuLieuDong\\DemoTruongDuLieuDong.csproj",
+        "projectPath": "D:\\LHBAO_DATA\\dynamic-fields-database\\DemoTruongDuLieuDong\\DemoTruongDuLieuDong.csproj",
         "packagesPath": "C:\\Users\\HoaiBao-Le\\.nuget\\packages\\",
-        "outputPath": "D:\\LHBAO_DATA\\DemoTruongDuLieuDong\\DemoTruongDuLieuDong\\obj\\",
+        "outputPath": "D:\\LHBAO_DATA\\dynamic-fields-database\\DemoTruongDuLieuDong\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HoaiBao-Le\\AppData\\Roaming\\NuGet\\NuGet.Config",

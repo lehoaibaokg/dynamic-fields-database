@@ -35,7 +35,7 @@
                 <span asp-validation-for="Index" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Lưu luôn" class="btn btn-primary" />
+                <input type="submit" value="Lưu luôn" @(!ViewBag.IsCreate ? "disabled" : "") class="btn btn-primary" />
             </div>
         </form>
     </div>
