@@ -1,0 +1,35 @@
+﻿@model DemoTruongDuLieuDong.Models.ProductField
+
+@{
+    ViewData["Title"] = "Xóa trường bổ sung sản phẩm";
+}
+
+<h3>Có chắc muốn xóa không?</h3>
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TenTruong)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TenTruong)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TenHienThi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TenHienThi)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.KieuDuLieu)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.KieuDuLieu)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input hidden name="tenTruong" value="@Model.TenTruong" class="form-control" />
+        <input type="submit" value="Xóa luôn" class="btn btn-danger btn-sm" /> |
+        <a asp-action="Index">Quay lại</a>
+    </form>
+</div>

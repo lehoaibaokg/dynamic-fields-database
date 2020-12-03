@@ -1,0 +1,61 @@
+﻿@model DemoTruongDuLieuDong.Models.Product
+
+@{
+    ViewData["Title"] = "Xóa sản phẩm";
+}
+
+<h3>Có chắc muốn xóa không?</h3>
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MaHangHoa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MaHangHoa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TenHangHoa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TenHangHoa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GiaNhap)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GiaNhap)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GiaBan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GiaBan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GhiChu)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GhiChu)
+        </dd>
+        @foreach (var item in Model.ProductFields)
+        {
+            <dt class="col-sm-2">
+                @item.TenHienThi
+            </dt>
+            <dd class="col-sm-10">
+                @item.NoiDung
+            </dd>
+        }
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="submit" value="Xóa luôn" class="btn btn-danger btn-sm"/> |
+        <a asp-action="Index">Quay lại</a>
+    </form>
+</div>

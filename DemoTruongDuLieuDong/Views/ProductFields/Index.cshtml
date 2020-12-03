@@ -1,0 +1,52 @@
+﻿@model IEnumerable<DemoTruongDuLieuDong.Models.ProductField>
+
+@{
+    ViewData["Title"] = "Danh sách trường dữ liệu động sản phẩm";
+}
+
+<p>
+    <a asp-controller="Products" asp-action="Index">Quay lại</a> |
+    <a asp-action="Create">Thêm mới trường động</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TenTruong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenHienThi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KieuDuLieu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Index)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenTruong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenHienThi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KieuDuLieu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Index)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { TenTruongCu = item.TenTruong }) |
+                    @Html.ActionLink("Xóa", "Delete", new { TenTruong = item.TenTruong })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

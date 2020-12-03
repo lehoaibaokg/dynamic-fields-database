@@ -1,0 +1,78 @@
+﻿@model IEnumerable<DemoTruongDuLieuDong.Models.Product>
+
+@{
+    ViewData["Title"] = "Danh sách sản phẩm";
+
+    var productFields = Model.ToList()[0].ProductFields.OrderBy(x => x.Index);
+}
+
+<p>
+    <a asp-action="Create">Thêm mới hàng hóa</a> |
+    <a asp-controller="ProductFields" asp-action="Create">Thêm mới trường động</a> |
+    <a asp-controller="ProductFields" asp-action="Index">Danh sách các trường động</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaHangHoa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenHangHoa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaNhap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaBan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GhiChu)
+            </th>
+            @foreach (var item in productFields)
+            {
+                <th>
+                    @item.TenHienThi
+                </th>
+            }
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaHangHoa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenHangHoa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaNhap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaBan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GhiChu)
+            </td>
+            @foreach (var field in item.ProductFields.OrderBy(x => x.Index))
+            {
+                <td>@field.NoiDung</td>
+            }
+
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
